@@ -1,46 +1,108 @@
-# Getting Started with Create React App
+<p align="center">
+  <img width="260" alt="캡처" src="https://user-images.githubusercontent.com/49011398/166063818-3af7e3d9-0157-4e3e-96fe-5cab52e4cbb3.png">
+</p>
+<p align="center">
+  <b>React Calendar Component available to show events</b>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Content
+1. Introduction
+2. Features
+4. Setup
+5. User Guide
+6. Sources
 
-## Available Scripts
+## 1. Introduction
+### Background
+Recently, due to the advent of the untact era due to COVID-19, many educational institutions (elementary, middle, and higher educational institutions, universities, and private institutes) are replacing face-to-face classes with non-face-to-face classes. According to data conducted by the national educational statistics service KESS on 332 universities across the country, as of September 7, 2020, 196 universities (59.0%) across the country were taking ‘full face-to-face’ classes.
+Educational institutions are using existing video conferencing platforms rather than building their own non-face-to-face teaching platforms to convert classes to non-face-to-face. However, since the existing video conferencing platform is not made for educational purposes, it is inconvenient for educational institutions to use it for non-face-to-face classes. In addition, as the face-to-face classes are converted to non-face-to-face classes, the quality of classes deteriorates or student participation is low. Among the students who experienced the non-face-to-face class, the response that they were satisfied with the non-face-to-face class was low at 21.4%. On the other hand, 40.2% answered that they were average and 38.4% answered that they were dissatisfied.
+Therefore, educational institutions need an online video conferencing platform for educational purposes, and as they switch to non-face-to-face classes, they need to compensate for side effects such as lowering the quality of classes or lowering participation.
+### Goal
+As mentioned earlier, as the classes of educational institutions are converted to non-face-to-face lectures, problems such as a lack of video conferencing platforms for educational purposes, deterioration of class quality, and reduced student participation occur.
+Because non-face-to-face classes are conducted online by professors and students, it is difficult to check the level of understanding or responses of students compared to face-to-face classes. Since most students do not turn on their cams, the professor cannot gauge the students' expressions or level of understanding, which leads to a decrease in the quality of the class, and the students become passive in class, which leads to a decrease in participation. For this reason, in most cases, the professor is unilaterally teaching without knowing the reaction of the students.
+In addition, although Zoom and Google Meet are currently widely used video conferencing platforms in educational institutions, these are also platforms for 'video conferencing streaming', not 'classes'. A function to check this is not provided properly.
+Therefore, in order to solve the above problems, we aim to improve the quality of classes and improve student participation by building a video conferencing platform for educational purposes that increases communication between students and professors during class and provides functions to actively interact with each other. want to In addition, we intend to establish an integrated education service by linking the video conferencing platform focused on education and interaction with the education management system (LMS).
+ Specifically, functions such as quizzes, comprehension assessment, and responses will be provided during real-time classes to increase the interaction between professors and students. In addition, we intend to contribute to improving the quality of classes by providing services that can store, manage, and visualize the data obtained during real-time classes in LMS.
+## 2. Features
+### During Class
+- anonymous chat, Question
+- Provide real time Speaker's speech
+- Auto Q&A through Machine Reading
+- Comprehension survey & real time evaluation
+- Provide Student's status through 3D Modeling 
+### Other
+- Lecture note
+- Notice
+- Assignment
+- Community
+- auto attendance excel file
+- Visualized interaction analyzed page
+## 3. Screenshots
+<img width="960" alt="1" src="https://user-images.githubusercontent.com/49011398/120563274-29519f00-c443-11eb-93e5-1e2258c311ec.PNG">
+<p align="left">
+  <b>Main Page</b>
+</p>
+<img width="948" alt="2" src="https://user-images.githubusercontent.com/49011398/120563277-29519f00-c443-11eb-8bf1-a72ea0aaa225.PNG">
+<p align="left">
+  <b>Lecture Analysis Page</b>
+</p>
+<img width="948" alt="3" src="https://user-images.githubusercontent.com/49011398/120563275-29519f00-c443-11eb-9f0a-2198115143c7.PNG">
+<p align="left">
+  <b>Attendance Page</b>
+</p>
+<img width="954" alt="4" src="https://user-images.githubusercontent.com/49011398/120563273-29519f00-c443-11eb-8e9c-233c54410218.png">
+<p align="left">
+  <b>During Class Page</b>
+</p>
+<img width="948" alt="5" src="https://user-images.githubusercontent.com/49011398/120563276-29519f00-c443-11eb-95b1-d3c5ab2cad36.PNG">
+<p align="left">
+  <b>Assignment Page</b>
+</p>
 
-In the project directory, you can run:
+## 4. Setup
+### Our domain
+Visit our Servie Domain https://disboard13.kro.kr/ to fully experience our system!
+### Local
+~~~
+cd Web-Frontend
+npm install
+npm link ../my_modules/zoomus/instantsdk
+npm start
+~~~
+Our server related source code is not intended to work locally.
+Run only Front-end related code, and rest will be done by EC2 server.
+~~~
+npm build
+~~~
+For those who like to build app.
+## 5. Technologies
+### Front-End
+- React.js
+- Redux Thunk
+- styled-component
+- javascript / Typescript
+- HTML / CSS
+- HTML5 Canvas
+- Web Speech API
+### Back-End
+- Node.js + Express.js
+- mongoDB + mongoose
+- swagger( for API Docs )
+- docker ( for Deployment )
+- AWS ec2 / S3
+- Nginx( for Reverse Proxy Server)
+- Jenkins( for CI/CD)
+### Mobile App
+- Android Studio
+- Kotlin / Java
+- JET Pack
+### AI
+- flask
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 6. Sources
+- [Zoom Web Video SDK](https://marketplace.zoom.us/docs/sdk)
+- [Chart.js](https://github.com/reactchartjs/react-chartjs-2)
+- [Three.js](https://threejs.org/)
+- [CKEditor](https://ckeditor.com/)
+- [antd](https://ant.design)
+- [socket-io](https://socket.io/)
