@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="600" alt="캡처" src="https://user-images.githubusercontent.com/49011398/166063818-3af7e3d9-0157-4e3e-96fe-5cab52e4cbb3.png">
+  <img width="900" alt="캡처" src="https://user-images.githubusercontent.com/49011398/166063818-3af7e3d9-0157-4e3e-96fe-5cab52e4cbb3.png">
 </p>
 <p align="center">
   <b>React Calendar Component available to show events</b>
