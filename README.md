@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+### Usage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here's an example of basic usage:
 
-## Available Scripts
+```js
+import React, { useState } from 'react';
+import Calendar from 'react-calendar';
 
-In the project directory, you can run:
+function MyApp() {
+  return (
+    <div>
+      <Calendar year={year}
+                month={month}
+                onClickCell={onClickCell}
+                onClickPrevBtn={onClickPrevBtn}
+                onClickNextBtn={onClickNextBtn}
+                eventMap={calendarEventMap}
+                config={calendarConfig}
+                onClickAddEventBtn={showEventAddPopup}/>
+    </div>
+  );
+}
+```
+#### Props
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Prop name               | Description                                                                                                                                                                                                                                                                                                                                                                                                                | Default value                                         | Example values                                                                                                                                                                                                                                                                                       |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| year                    | year                                                                                                                                                                                                                                                                                                                                                                                                                       | (today)                                               | `new Date(2017, 0, 1)`                                                                                                                                                                                                                                                                               |
+| month                   | month                                                                                                                                                                                                                                                                                                                                                                                                                         | `false`                                               | `true`                                                                                                                                                                                                                                                                                                                                                                      |
+| onClickCell             | eventHandler on click cell                                                                                                                                                                                                                                                                                                                                                                                                 | Type of calendar most commonly used in a given locale | `"ISO 8601"`                                                                                                                                                                                                                                                                                         |
+| onClickPrevBtn          | eventHandler on click prev month button                                                                                                                                                                                                                                                                                                                                                                                        | n/a                                                   | <ul><li>String: `"class1 class2"`</li><li>Array of strings: `["class1", "class2 class3"]`</li></ul>                                                                                                                                                                                                  |
+| onClickNextBtn          | eventHandler on click next month button                                                                                                                                                                                                                                                                                                                                                                                         | (today)                                               | `new Date(2017, 0, 1)`                                                                                                                                                                                                                                                                               |
+| eventMap                | events needed to show on calendar                                                                                                                                                                                                                                         | n/a                                                   | <ul><li>Date: `new Date()`</li><li>An array of dates: `[new Date(2017, 0, 1), new Date(2017, 7, 1)]`                                                                                                                                                                                                 |
+| config                  | calendar configs(lang, color..)                                                                                                                                                                                                 | The most detailed view allowed                        | `"year"`                                                                                                                                                                                                                                                                                             |
+| onClickAddEventBtn      | eventHandler on click addEvent button                                                                                                                                                                                                                                                                                                       | (default formatter)                                   | `(locale, date) => formatDate(date, 'd')`                                                                                                                                                                                                                                                            |
